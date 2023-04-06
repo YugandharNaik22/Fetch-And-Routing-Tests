@@ -1,0 +1,4477 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "fetch-and-routing-practice",
+      "private": true,
+      "version": "1.0.0",
+      "engines": {
+        "node": "^10.13 || 12 || 14 || 15",
+        "npm": ">=6"
+      },
+      "dependencies": {
+        "@testing-library/jest-dom": "5.11.9",
+        "@testing-library/react": "11.2.5",
+        "@testing-library/user-event": "12.6.2",
+        "chalk": "4.1.0",
+        "history": "5.0.0",
+        "msw": "0.28.1",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-loader-spinner": "4.0.0",
+        "react-router-dom": "5.2.0"
+      },
+      "devDependencies": {
+        "eslint-config-airbnb": "18.2.1",
+        "eslint-config-prettier": "8.1.0",
+        "eslint-plugin-prettier": "3.3.1",
+        "husky": "4.3.8",
+        "lint-staged": "10.5.4",
+        "npm-run-all": "4.1.5",
+        "prettier": "2.2.1",
+        "react-scripts": "4.0.3"
+      },
+      "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "lint": "eslint .",
+        "lint:fix": "eslint --fix src/",
+        "format": "prettier --write \"./src\"",
+        "run-all": "npm-run-all --parallel test lint:fix"
+      },
+      "lint-staged": {
+        "*.js": [
+          "npm run lint:fix"
+        ],
+        "*.{js, jsx, json, html, css}": [
+          "npm run format"
+        ]
+      },
+      "husky": {
+        "hooks": {
+          "pre-commit": "lint-staged"
+        }
+      },
+      "jest": {
+        "collectCoverageFrom": [
+          "src/**/*.js"
+        ]
+      },
+      "browserslist": {
+        "development": [
+          "last 2 chrome versions",
+          "last 2 firefox versions",
+          "last 2 edge versions"
+        ],
+        "production": [
+          ">1%",
+          "last 4 versions",
+          "Firefox ESR",
+          "not ie < 11"
+        ]
+      }
+    },
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/home/workspace/.pnpm-store/v3",
+    "virtualStoreDir": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-config-airbnb/18.2.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-config-airbnb",
+      "rawSpec": "18.2.1"
+    }
+  },
+  "5 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-config-airbnb/18.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "6 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-config-prettier/8.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-config-prettier",
+      "rawSpec": "8.1.0"
+    }
+  },
+  "7 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-config-prettier/8.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "8 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/lint-staged/10.5.4",
+    "wanted": {
+      "dependentId": ".",
+      "name": "lint-staged",
+      "rawSpec": "10.5.4"
+    }
+  },
+  "9 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lint-staged/10.5.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/npm-run-all/4.1.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "npm-run-all",
+      "rawSpec": "4.1.5"
+    }
+  },
+  "11 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/npm-run-all/4.1.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "12 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/husky/4.3.8",
+    "wanted": {
+      "dependentId": ".",
+      "name": "husky",
+      "rawSpec": "4.3.8"
+    }
+  },
+  "13 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/husky/4.3.8",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "14 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-prettier/3.3.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "eslint-plugin-prettier",
+      "rawSpec": "3.3.1"
+    }
+  },
+  "15 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-prettier/3.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-scripts/4.0.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-scripts",
+      "rawSpec": "4.0.3"
+    }
+  },
+  "17 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-scripts/4.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "18 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@testing-library/jest-dom/5.11.9",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@testing-library/jest-dom",
+      "rawSpec": "5.11.9"
+    }
+  },
+  "19 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/jest-dom/5.11.9",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "20 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prettier/2.2.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "prettier",
+      "rawSpec": "2.2.1"
+    }
+  },
+  "21 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prettier/2.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "22 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@testing-library/user-event/12.6.2",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@testing-library/user-event",
+      "rawSpec": "12.6.2"
+    }
+  },
+  "23 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/user-event/12.6.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "24 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@testing-library/react/11.2.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@testing-library/react",
+      "rawSpec": "11.2.5"
+    }
+  },
+  "25 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/react/11.2.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "26 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/history/5.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "history",
+      "rawSpec": "5.0.0"
+    }
+  },
+  "27 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/history/5.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "28 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/4.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "chalk",
+      "rawSpec": "4.1.0"
+    }
+  },
+  "29 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/4.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "30 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-router-dom/5.2.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-router-dom",
+      "rawSpec": "5.2.0"
+    }
+  },
+  "31 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-router-dom/5.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "32 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react/17.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react",
+      "rawSpec": "17.0.1"
+    }
+  },
+  "33 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react/17.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "34 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-dom/17.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-dom",
+      "rawSpec": "17.0.1"
+    }
+  },
+  "35 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-dom/17.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "36 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-config-airbnb/18.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "37 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lint-staged/10.5.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "38 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-config-prettier/8.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "39 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/npm-run-all/4.1.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "40 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/husky/4.3.8",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "41 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-prettier/3.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "42 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-scripts/4.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "43 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prettier/2.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "44 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/jest-dom/5.11.9",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "45 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/user-event/12.6.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "46 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/react/11.2.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "47 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/history/5.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "48 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/4.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "49 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-router-dom/5.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "50 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react/17.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "51 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-dom/17.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "52 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-loader-spinner/4.0.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "react-loader-spinner",
+      "rawSpec": "4.0.0"
+    }
+  },
+  "53 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-loader-spinner/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "54 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/react-loader-spinner/4.0.0",
+    "size": 25959,
+    "status": "started"
+  },
+  "55 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-loader-spinner/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "56 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/msw/0.28.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "msw",
+      "rawSpec": "0.28.1"
+    }
+  },
+  "57 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/msw/0.28.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "58 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-config-airbnb-base/14.2.1",
+    "wanted": {
+      "dependentId": "/eslint-config-airbnb/18.2.1",
+      "name": "eslint-config-airbnb-base",
+      "rawSpec": "^14.2.1"
+    }
+  },
+  "59 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-config-airbnb-base/14.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "60 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/object.assign/4.1.4",
+    "wanted": {
+      "dependentId": "/eslint-config-airbnb/18.2.1",
+      "name": "object.assign",
+      "rawSpec": "^4.1.2"
+    }
+  },
+  "61 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/object.assign/4.1.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "62 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/string-argv/0.3.1",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "string-argv",
+      "rawSpec": "0.3.1"
+    }
+  },
+  "63 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/string-argv/0.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "64 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/object.assign/4.1.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "65 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-config-airbnb-base/14.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "66 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/string-argv/0.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "67 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/msw/0.28.1",
+    "size": 289955,
+    "status": "started"
+  },
+  "68 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/stringify-object/3.3.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "stringify-object",
+      "rawSpec": "^3.3.0"
+    }
+  },
+  "69 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/stringify-object/3.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "70 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/stringify-object/3.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "71 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cli-truncate/2.1.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "cli-truncate",
+      "rawSpec": "^2.1.0"
+    }
+  },
+  "72 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cli-truncate/2.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "73 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cli-truncate/2.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "74 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/object.entries/1.1.6",
+    "wanted": {
+      "dependentId": "/eslint-config-airbnb/18.2.1",
+      "name": "object.entries",
+      "rawSpec": "^1.1.2"
+    }
+  },
+  "75 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/object.entries/1.1.6",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "76 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/object.entries/1.1.6",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "77 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/dedent/0.7.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "dedent",
+      "rawSpec": "^0.7.0"
+    }
+  },
+  "78 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dedent/0.7.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "79 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dedent/0.7.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "80 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/normalize-path/3.0.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "normalize-path",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "81 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize-path/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "82 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize-path/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "83 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ansi-styles/3.2.1",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "ansi-styles",
+      "rawSpec": "^3.2.1"
+    }
+  },
+  "84 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ansi-styles/3.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "85 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/log-symbols/4.1.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "log-symbols",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "86 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/log-symbols/4.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "87 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ansi-styles/3.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "88 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/log-symbols/4.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "89 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/please-upgrade-node/3.2.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "please-upgrade-node",
+      "rawSpec": "^3.2.0"
+    }
+  },
+  "90 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/please-upgrade-node/3.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "91 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/please-upgrade-node/3.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "92 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/4.1.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "chalk",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "93 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/2.4.2",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "chalk",
+      "rawSpec": "^2.4.1"
+    }
+  },
+  "94 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/2.4.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "95 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/4.1.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "chalk",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "96 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cosmiconfig/7.1.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "cosmiconfig",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "97 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cosmiconfig/7.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "98 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/2.4.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "99 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cosmiconfig/7.1.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "cosmiconfig",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "100 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cosmiconfig/7.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "101 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/msw/0.28.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "102 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/commander/6.2.1",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "commander",
+      "rawSpec": "^6.2.0"
+    }
+  },
+  "103 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/commander/6.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "104 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/commander/6.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "105 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/enquirer/2.3.6",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "enquirer",
+      "rawSpec": "^2.3.6"
+    }
+  },
+  "106 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/enquirer/2.3.6",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "107 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/enquirer/2.3.6",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "108 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/micromatch/4.0.5",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "micromatch",
+      "rawSpec": "^4.0.2"
+    }
+  },
+  "109 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/micromatch/4.0.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "110 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/please-upgrade-node/3.2.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "please-upgrade-node",
+      "rawSpec": "^3.2.0"
+    }
+  },
+  "111 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/micromatch/4.0.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "112 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/execa/4.1.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "execa",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "113 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/execa/4.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "114 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/execa/4.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "115 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/debug/4.3.4",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "debug",
+      "rawSpec": "^4.2.0"
+    }
+  },
+  "116 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/debug/4.3.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "117 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/debug/4.3.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "118 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/memorystream/0.3.1",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "memorystream",
+      "rawSpec": "^0.3.1"
+    }
+  },
+  "119 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/memorystream/0.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "120 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/memorystream/0.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "121 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cross-spawn/6.0.5",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "cross-spawn",
+      "rawSpec": "^6.0.5"
+    }
+  },
+  "122 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cross-spawn/6.0.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "123 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cross-spawn/6.0.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "124 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/core/7.12.3",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "@babel/core",
+      "rawSpec": "7.12.3"
+    }
+  },
+  "125 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/core/7.12.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "126 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@pmmmwh/react-refresh-webpack-plugin/0.4.3",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "@pmmmwh/react-refresh-webpack-plugin",
+      "rawSpec": "0.4.3"
+    }
+  },
+  "127 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pmmmwh/react-refresh-webpack-plugin/0.4.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "128 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/core/7.12.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "129 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@pmmmwh/react-refresh-webpack-plugin/0.4.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "130 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@svgr/webpack/5.5.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "@svgr/webpack",
+      "rawSpec": "5.5.0"
+    }
+  },
+  "131 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@svgr/webpack/5.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "132 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@svgr/webpack/5.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "133 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/read-pkg/3.0.0",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "read-pkg",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "134 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/read-pkg/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "135 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/read-pkg/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "136 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pidtree/0.3.1",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "pidtree",
+      "rawSpec": "^0.3.0"
+    }
+  },
+  "137 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pidtree/0.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "138 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pidtree/0.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "139 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/shell-quote/1.8.0",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "shell-quote",
+      "rawSpec": "^1.6.1"
+    }
+  },
+  "140 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/shell-quote/1.8.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "141 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/shell-quote/1.8.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "142 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/string.prototype.padend/3.1.4",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "string.prototype.padend",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "143 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/string.prototype.padend/3.1.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "144 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/babel-loader/8.1.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "babel-loader",
+      "rawSpec": "8.1.0"
+    }
+  },
+  "145 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-loader/8.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "146 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/string.prototype.padend/3.1.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "147 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-loader/8.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "148 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/compare-versions/3.6.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "compare-versions",
+      "rawSpec": "^3.6.0"
+    }
+  },
+  "149 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/compare-versions/3.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "150 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/compare-versions/3.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "151 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ci-info/2.0.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "ci-info",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "152 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ci-info/2.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "153 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/find-versions/4.0.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "find-versions",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "154 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/find-versions/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "155 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ci-info/2.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "156 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/find-versions/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "157 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pkg-dir/5.0.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "pkg-dir",
+      "rawSpec": "^5.0.0"
+    }
+  },
+  "158 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pkg-dir/5.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "159 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/case-sensitive-paths-webpack-plugin/2.3.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "case-sensitive-paths-webpack-plugin",
+      "rawSpec": "2.3.0"
+    }
+  },
+  "160 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/case-sensitive-paths-webpack-plugin/2.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "161 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pkg-dir/5.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "162 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/case-sensitive-paths-webpack-plugin/2.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "163 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/opencollective-postinstall/2.0.3",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "opencollective-postinstall",
+      "rawSpec": "^2.0.2"
+    }
+  },
+  "164 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/opencollective-postinstall/2.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "165 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/css-loader/4.3.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "css-loader",
+      "rawSpec": "4.3.0"
+    }
+  },
+  "166 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/css-loader/4.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "167 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/slash/3.0.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "slash",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "168 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/slash/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "169 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/which-pm-runs/1.1.0",
+    "wanted": {
+      "dependentId": "/husky/4.3.8",
+      "name": "which-pm-runs",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "170 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/which-pm-runs/1.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "171 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/dotenv/8.2.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "dotenv",
+      "rawSpec": "8.2.0"
+    }
+  },
+  "172 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dotenv/8.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "173 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/dotenv-expand/5.1.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "dotenv-expand",
+      "rawSpec": "5.1.0"
+    }
+  },
+  "174 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dotenv-expand/5.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "175 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/opencollective-postinstall/2.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "176 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/css-loader/4.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "177 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/slash/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "178 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dotenv/8.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "179 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/which-pm-runs/1.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "180 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/dotenv-expand/5.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "181 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prettier-linter-helpers/1.0.0",
+    "wanted": {
+      "dependentId": "/eslint-plugin-prettier/3.3.1",
+      "name": "prettier-linter-helpers",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "182 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prettier-linter-helpers/1.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "183 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prettier-linter-helpers/1.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "184 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/bfj/7.0.2",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "bfj",
+      "rawSpec": "^7.0.2"
+    }
+  },
+  "185 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/bfj/7.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "186 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/bfj/7.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "187 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/camelcase/6.3.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "camelcase",
+      "rawSpec": "^6.1.0"
+    }
+  },
+  "188 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/camelcase/6.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "189 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/camelcase/6.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "190 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/fsevents/2.3.2: wanted {\"cpu\":[\"any\"],\"os\":[\"darwin\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\"})",
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice"
+  },
+  "191 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/fsevents/2.3.2: wanted {\"cpu\":[\"any\"],\"os\":[\"darwin\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\"})",
+    "package": {
+      "id": "registry.npmjs.org/fsevents/2.3.2",
+      "name": "fsevents",
+      "version": "2.3.2"
+    },
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "reason": "unsupported_platform"
+  },
+  "192 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/fsevents/2.3.2",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "fsevents",
+      "rawSpec": "^2.1.3"
+    }
+  },
+  "193 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fsevents/2.3.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "194 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/minimatch/3.1.2",
+    "wanted": {
+      "dependentId": "/npm-run-all/4.1.5",
+      "name": "minimatch",
+      "rawSpec": "^3.0.4"
+    }
+  },
+  "195 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/minimatch/3.1.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "196 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/minimatch/3.1.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "197 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/babel-eslint/10.1.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "babel-eslint",
+      "rawSpec": "^10.1.0"
+    }
+  },
+  "198 debug pnpm:deprecation": {
+    "deprecated": "babel-eslint is now @babel/eslint-parser. This package will no longer receive updates.",
+    "depth": 1,
+    "pkgId": "registry.npmjs.org/babel-eslint/10.1.0",
+    "pkgName": "babel-eslint",
+    "pkgVersion": "10.1.0",
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice"
+  },
+  "199 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-eslint/10.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "200 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-eslint/10.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "201 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/babel-plugin-named-asset-import/0.3.8",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "babel-plugin-named-asset-import",
+      "rawSpec": "^0.3.7"
+    }
+  },
+  "202 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-plugin-named-asset-import/0.3.8",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "203 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/file-loader/6.1.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "file-loader",
+      "rawSpec": "6.1.1"
+    }
+  },
+  "204 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/file-loader/6.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "205 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-plugin-named-asset-import/0.3.8",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "206 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/file-loader/6.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "207 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-jsx-a11y/6.7.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint-plugin-jsx-a11y",
+      "rawSpec": "^6.3.1"
+    }
+  },
+  "208 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-jsx-a11y/6.7.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "209 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/html-webpack-plugin/4.5.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "html-webpack-plugin",
+      "rawSpec": "4.5.0"
+    }
+  },
+  "210 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/html-webpack-plugin/4.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "211 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/identity-obj-proxy/3.0.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "identity-obj-proxy",
+      "rawSpec": "3.0.0"
+    }
+  },
+  "212 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/identity-obj-proxy/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "213 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/html-webpack-plugin/4.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "214 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/jest/26.6.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "jest",
+      "rawSpec": "26.6.0"
+    }
+  },
+  "215 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest/26.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "216 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/jest-circus/26.6.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "jest-circus",
+      "rawSpec": "26.6.0"
+    }
+  },
+  "217 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest-circus/26.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "218 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-jsx-a11y/6.7.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "219 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/identity-obj-proxy/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "220 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest/26.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "221 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest-circus/26.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "222 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/jest-resolve/26.6.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "jest-resolve",
+      "rawSpec": "26.6.0"
+    }
+  },
+  "223 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest-resolve/26.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "224 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/jest-watch-typeahead/0.6.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "jest-watch-typeahead",
+      "rawSpec": "0.6.1"
+    }
+  },
+  "225 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest-watch-typeahead/0.6.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "226 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest-resolve/26.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "227 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/mini-css-extract-plugin/0.11.3",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "mini-css-extract-plugin",
+      "rawSpec": "0.11.3"
+    }
+  },
+  "228 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/mini-css-extract-plugin/0.11.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "229 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/jest-watch-typeahead/0.6.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "230 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/mini-css-extract-plugin/0.11.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "231 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/optimize-css-assets-webpack-plugin/5.0.4",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "optimize-css-assets-webpack-plugin",
+      "rawSpec": "5.0.4"
+    }
+  },
+  "232 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/optimize-css-assets-webpack-plugin/5.0.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "233 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/pnp-webpack-plugin/1.6.4",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "pnp-webpack-plugin",
+      "rawSpec": "1.6.4"
+    }
+  },
+  "234 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pnp-webpack-plugin/1.6.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "235 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/optimize-css-assets-webpack-plugin/5.0.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "236 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-flexbugs-fixes/4.2.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "postcss-flexbugs-fixes",
+      "rawSpec": "4.2.1"
+    }
+  },
+  "237 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-flexbugs-fixes/4.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "238 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/pnp-webpack-plugin/1.6.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "239 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-flexbugs-fixes/4.2.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "240 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-loader/3.0.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "postcss-loader",
+      "rawSpec": "3.0.0"
+    }
+  },
+  "241 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-loader/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "242 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-normalize/8.0.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "postcss-normalize",
+      "rawSpec": "8.0.1"
+    }
+  },
+  "243 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-normalize/8.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "244 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-loader/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "245 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-preset-env/6.7.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "postcss-preset-env",
+      "rawSpec": "6.7.0"
+    }
+  },
+  "246 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-preset-env/6.7.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "247 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/postcss-safe-parser/5.0.2",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "postcss-safe-parser",
+      "rawSpec": "5.0.2"
+    }
+  },
+  "248 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-safe-parser/5.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "249 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-normalize/8.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "250 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-preset-env/6.7.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "251 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prompts/2.4.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "prompts",
+      "rawSpec": "2.4.0"
+    }
+  },
+  "252 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prompts/2.4.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "253 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/postcss-safe-parser/5.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "254 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prompts/2.4.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "255 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-react/7.32.2",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint-plugin-react",
+      "rawSpec": "^7.21.5"
+    }
+  },
+  "256 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-react/7.32.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "257 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-react/7.32.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "258 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-flowtype/5.10.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint-plugin-flowtype",
+      "rawSpec": "^5.2.0"
+    }
+  },
+  "259 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-flowtype/5.10.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "260 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/babel-preset-react-app/10.0.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "babel-preset-react-app",
+      "rawSpec": "^10.0.0"
+    }
+  },
+  "261 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-preset-react-app/10.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "262 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-flowtype/5.10.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "263 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-preset-react-app/10.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "264 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/resolve/1.18.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "resolve",
+      "rawSpec": "1.18.1"
+    }
+  },
+  "265 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve/1.18.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "266 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve/1.18.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "267 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-config-react-app/6.0.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint-config-react-app",
+      "rawSpec": "^6.0.0"
+    }
+  },
+  "268 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-config-react-app/6.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "269 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-config-react-app/6.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "270 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-webpack-plugin/2.7.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint-webpack-plugin",
+      "rawSpec": "^2.5.2"
+    }
+  },
+  "271 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-webpack-plugin/2.7.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "272 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver/7.3.2",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "semver",
+      "rawSpec": "7.3.2"
+    }
+  },
+  "273 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/7.3.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "274 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-webpack-plugin/2.7.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "275 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/style-loader/1.3.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "style-loader",
+      "rawSpec": "1.3.0"
+    }
+  },
+  "276 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/style-loader/1.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "277 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/7.3.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "278 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/style-loader/1.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "279 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/terser-webpack-plugin/4.2.3",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "terser-webpack-plugin",
+      "rawSpec": "4.2.3"
+    }
+  },
+  "280 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/terser-webpack-plugin/4.2.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "281 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/terser-webpack-plugin/4.2.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "282 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ts-pnp/1.2.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "ts-pnp",
+      "rawSpec": "1.2.0"
+    }
+  },
+  "283 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ts-pnp/1.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "284 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ts-pnp/1.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "285 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/url-loader/4.1.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "url-loader",
+      "rawSpec": "4.1.1"
+    }
+  },
+  "286 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/url-loader/4.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "287 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/url-loader/4.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "288 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/webpack/4.44.2",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "webpack",
+      "rawSpec": "4.44.2"
+    }
+  },
+  "289 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/webpack/4.44.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "290 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/webpack-dev-server/3.11.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "webpack-dev-server",
+      "rawSpec": "3.11.1"
+    }
+  },
+  "291 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/webpack-dev-server/3.11.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "292 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/webpack-manifest-plugin/2.2.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "webpack-manifest-plugin",
+      "rawSpec": "2.2.0"
+    }
+  },
+  "293 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/webpack-manifest-plugin/2.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "294 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/workbox-webpack-plugin/5.1.4",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "workbox-webpack-plugin",
+      "rawSpec": "5.1.4"
+    }
+  },
+  "295 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/workbox-webpack-plugin/5.1.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "296 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/webpack/4.44.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "297 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/webpack-manifest-plugin/2.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "298 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/webpack-dev-server/3.11.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "299 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/workbox-webpack-plugin/5.1.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "300 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-app-polyfill/2.0.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "react-app-polyfill",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "301 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-app-polyfill/2.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "302 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-app-polyfill/2.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "303 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-import/2.27.5",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint-plugin-import",
+      "rawSpec": "^2.22.1"
+    }
+  },
+  "304 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-import/2.27.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "305 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-import/2.27.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "306 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-dev-utils/11.0.4",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "react-dev-utils",
+      "rawSpec": "^11.0.3"
+    }
+  },
+  "307 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-dev-utils/11.0.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "308 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/3.0.0",
+    "wanted": {
+      "dependentId": "/@testing-library/jest-dom/5.11.9",
+      "name": "chalk",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "309 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "310 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-dev-utils/11.0.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "311 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chalk/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "312 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/fs-extra/9.1.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "fs-extra",
+      "rawSpec": "^9.0.1"
+    }
+  },
+  "313 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fs-extra/9.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "314 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fs-extra/9.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "315 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/testing-library__jest-dom/5.14.5",
+    "wanted": {
+      "dependentId": "/@testing-library/jest-dom/5.11.9",
+      "name": "@types/testing-library__jest-dom",
+      "rawSpec": "^5.9.1"
+    }
+  },
+  "316 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/testing-library__jest-dom/5.14.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "317 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/testing-library__jest-dom/5.14.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "318 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/listr2/3.14.0",
+    "wanted": {
+      "dependentId": "/lint-staged/10.5.4",
+      "name": "listr2",
+      "rawSpec": "^3.2.2"
+    }
+  },
+  "319 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/listr2/3.14.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "320 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/listr2/3.14.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "321 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/css/3.0.0",
+    "wanted": {
+      "dependentId": "/@testing-library/jest-dom/5.11.9",
+      "name": "css",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "322 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/css/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "323 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/css/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "324 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/babel-jest/26.6.3",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "babel-jest",
+      "rawSpec": "^26.6.0"
+    }
+  },
+  "325 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-jest/26.6.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "326 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/css.escape/1.5.1",
+    "wanted": {
+      "dependentId": "/@testing-library/jest-dom/5.11.9",
+      "name": "css.escape",
+      "rawSpec": "^1.5.1"
+    }
+  },
+  "327 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/css.escape/1.5.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "328 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/babel-jest/26.6.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "329 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/css.escape/1.5.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "330 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/resolve-url-loader/3.1.5",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "resolve-url-loader",
+      "rawSpec": "^3.1.2"
+    }
+  },
+  "331 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve-url-loader/3.1.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "332 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve-url-loader/3.1.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "333 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/redent/3.0.0",
+    "wanted": {
+      "dependentId": "/@testing-library/jest-dom/5.11.9",
+      "name": "redent",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "334 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/redent/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "335 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ansi-styles/4.3.0",
+    "wanted": {
+      "dependentId": "/chalk/4.1.0",
+      "name": "ansi-styles",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "336 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ansi-styles/4.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "337 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ansi-styles/4.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "338 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/redent/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "339 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/aria-query/4.2.2",
+    "wanted": {
+      "dependentId": "/@testing-library/jest-dom/5.11.9",
+      "name": "aria-query",
+      "rawSpec": "^4.2.2"
+    }
+  },
+  "340 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/aria-query/4.2.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "341 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/aria-query/4.2.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "342 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/lodash/4.17.21",
+    "wanted": {
+      "dependentId": "/@testing-library/jest-dom/5.11.9",
+      "name": "lodash",
+      "rawSpec": "^4.17.15"
+    }
+  },
+  "343 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lodash/4.17.21",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "344 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/lodash/4.17.21",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "345 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "wanted": {
+      "dependentId": "/@testing-library/jest-dom/5.11.9",
+      "name": "@babel/runtime",
+      "rawSpec": "^7.9.2"
+    }
+  },
+  "346 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "347 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "wanted": {
+      "dependentId": "/@testing-library/user-event/12.6.2",
+      "name": "@babel/runtime",
+      "rawSpec": "^7.12.5"
+    }
+  },
+  "348 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "wanted": {
+      "dependentId": "/@testing-library/react/11.2.5",
+      "name": "@babel/runtime",
+      "rawSpec": "^7.12.5"
+    }
+  },
+  "349 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "wanted": {
+      "dependentId": "/history/5.0.0",
+      "name": "@babel/runtime",
+      "rawSpec": "^7.7.6"
+    }
+  },
+  "350 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "wanted": {
+      "dependentId": "/react-router-dom/5.2.0",
+      "name": "@babel/runtime",
+      "rawSpec": "^7.1.2"
+    }
+  },
+  "351 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/react-router/5.2.0",
+    "wanted": {
+      "dependentId": "/react-router-dom/5.2.0",
+      "name": "react-router",
+      "rawSpec": "5.2.0"
+    }
+  },
+  "352 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-router/5.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "353 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/react-router/5.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "354 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "355 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/supports-color/7.2.0",
+    "wanted": {
+      "dependentId": "/chalk/4.1.0",
+      "name": "supports-color",
+      "rawSpec": "^7.1.0"
+    }
+  },
+  "356 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/supports-color/7.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "357 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/supports-color/7.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "358 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/history/4.10.1",
+    "wanted": {
+      "dependentId": "/react-router-dom/5.2.0",
+      "name": "history",
+      "rawSpec": "^4.9.0"
+    }
+  },
+  "359 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/history/4.10.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "360 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/history/4.10.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "361 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/loose-envify/1.4.0",
+    "wanted": {
+      "dependentId": "/react-router-dom/5.2.0",
+      "name": "loose-envify",
+      "rawSpec": "^1.3.1"
+    }
+  },
+  "362 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/loose-envify/1.4.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "363 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/loose-envify/1.4.0",
+    "wanted": {
+      "dependentId": "/react/17.0.1",
+      "name": "loose-envify",
+      "rawSpec": "^1.1.0"
+    }
+  },
+  "364 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/loose-envify/1.4.0",
+    "wanted": {
+      "dependentId": "/react-dom/17.0.1",
+      "name": "loose-envify",
+      "rawSpec": "^1.1.0"
+    }
+  },
+  "365 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tiny-warning/1.0.3",
+    "wanted": {
+      "dependentId": "/react-router-dom/5.2.0",
+      "name": "tiny-warning",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "366 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tiny-warning/1.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "367 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tiny-warning/1.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "368 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/loose-envify/1.4.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "369 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/object-assign/4.1.1",
+    "wanted": {
+      "dependentId": "/react/17.0.1",
+      "name": "object-assign",
+      "rawSpec": "^4.1.1"
+    }
+  },
+  "370 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/object-assign/4.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "371 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/object-assign/4.1.1",
+    "wanted": {
+      "dependentId": "/react-dom/17.0.1",
+      "name": "object-assign",
+      "rawSpec": "^4.1.1"
+    }
+  },
+  "372 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prop-types/15.8.1",
+    "wanted": {
+      "dependentId": "/react-router-dom/5.2.0",
+      "name": "prop-types",
+      "rawSpec": "^15.6.2"
+    }
+  },
+  "373 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prop-types/15.8.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "374 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prop-types/15.8.1",
+    "wanted": {
+      "dependentId": "/react-loader-spinner/4.0.0",
+      "name": "prop-types",
+      "rawSpec": "^15.7.2"
+    }
+  },
+  "375 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/object-assign/4.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "376 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prop-types/15.8.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "377 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tiny-invariant/1.3.1",
+    "wanted": {
+      "dependentId": "/react-router-dom/5.2.0",
+      "name": "tiny-invariant",
+      "rawSpec": "^1.0.2"
+    }
+  },
+  "378 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tiny-invariant/1.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "379 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tiny-invariant/1.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "380 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/sass-loader/10.4.1",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "sass-loader",
+      "rawSpec": "^10.0.5"
+    }
+  },
+  "381 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/sass-loader/10.4.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "382 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/4.1.0",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "chalk",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "383 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/sass-loader/10.4.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "384 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/inquirer/7.3.3",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "@types/inquirer",
+      "rawSpec": "^7.3.1"
+    }
+  },
+  "385 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/inquirer/7.3.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "386 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/cookie/0.4.1",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "@types/cookie",
+      "rawSpec": "^0.4.0"
+    }
+  },
+  "387 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/cookie/0.4.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "388 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@mswjs/cookies/0.1.7",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "@mswjs/cookies",
+      "rawSpec": "^0.1.4"
+    }
+  },
+  "389 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@mswjs/cookies/0.1.7",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "390 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-testing-library/3.10.2",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint-plugin-testing-library",
+      "rawSpec": "^3.9.2"
+    }
+  },
+  "391 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-testing-library/3.10.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "392 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-testing-library/3.10.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "393 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@open-draft/until/1.0.3",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "@open-draft/until",
+      "rawSpec": "^1.0.3"
+    }
+  },
+  "394 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@open-draft/until/1.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "395 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cookie/0.4.2",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "cookie",
+      "rawSpec": "^0.4.1"
+    }
+  },
+  "396 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cookie/0.4.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "397 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@types/inquirer/7.3.3",
+    "size": 12311,
+    "status": "started"
+  },
+  "398 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/inquirer/7.3.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "399 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@types/cookie/0.4.1",
+    "size": 3314,
+    "status": "started"
+  },
+  "400 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/cookie/0.4.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "401 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/js-levenshtein/1.1.1",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "@types/js-levenshtein",
+      "rawSpec": "^1.1.0"
+    }
+  },
+  "402 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/js-levenshtein/1.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "403 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@mswjs/interceptors/0.8.1",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "@mswjs/interceptors",
+      "rawSpec": "^0.8.0"
+    }
+  },
+  "404 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@mswjs/interceptors/0.8.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "405 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/cookie/0.4.2",
+    "size": 6986,
+    "status": "started"
+  },
+  "406 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@mswjs/cookies/0.1.7",
+    "size": 3415,
+    "status": "started"
+  },
+  "407 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@mswjs/cookies/0.1.7",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "408 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cookie/0.4.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "409 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/headers-utils/3.0.2",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "headers-utils",
+      "rawSpec": "^3.0.2"
+    }
+  },
+  "410 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/headers-utils/3.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "411 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@open-draft/until/1.0.3",
+    "size": 1869,
+    "status": "started"
+  },
+  "412 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@open-draft/until/1.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "413 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chokidar/3.5.3",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "chokidar",
+      "rawSpec": "^3.4.2"
+    }
+  },
+  "414 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chokidar/3.5.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "415 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/chokidar/3.5.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "416 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@types/js-levenshtein/1.1.1",
+    "size": 1591,
+    "status": "started"
+  },
+  "417 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/graphql/15.8.0",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "graphql",
+      "rawSpec": "^15.4.0"
+    }
+  },
+  "418 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/graphql/15.8.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "419 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/js-levenshtein/1.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "420 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/js-levenshtein/1.1.6",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "js-levenshtein",
+      "rawSpec": "^1.1.6"
+    }
+  },
+  "421 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/js-levenshtein/1.1.6",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "422 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/headers-utils/3.0.2",
+    "size": 7424,
+    "status": "started"
+  },
+  "423 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/headers-utils/3.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "424 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/statuses/2.0.1",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "statuses",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "425 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/statuses/2.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "426 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/statuses/2.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "427 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/node-match-path/0.6.3",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "node-match-path",
+      "rawSpec": "^0.6.1"
+    }
+  },
+  "428 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/node-match-path/0.6.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "429 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/strict-event-emitter/0.1.0",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "strict-event-emitter",
+      "rawSpec": "^0.1.0"
+    }
+  },
+  "430 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strict-event-emitter/0.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "431 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/graphql/15.8.0",
+    "size": 434831,
+    "status": "started"
+  },
+  "432 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/js-levenshtein/1.1.6",
+    "size": 2450,
+    "status": "started"
+  },
+  "433 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/js-levenshtein/1.1.6",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "434 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/@mswjs/interceptors/0.8.1",
+    "size": 39780,
+    "status": "started"
+  },
+  "435 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/node-fetch/2.6.9",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "node-fetch",
+      "rawSpec": "^2.6.1"
+    }
+  },
+  "436 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/node-fetch/2.6.9",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "437 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/object.assign/4.1.4",
+    "wanted": {
+      "dependentId": "/eslint-config-airbnb-base/14.2.1",
+      "name": "object.assign",
+      "rawSpec": "^4.1.2"
+    }
+  },
+  "438 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/object.entries/1.1.6",
+    "wanted": {
+      "dependentId": "/eslint-config-airbnb-base/14.2.1",
+      "name": "object.entries",
+      "rawSpec": "^1.1.2"
+    }
+  },
+  "439 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/node-fetch/2.6.9",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "440 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@mswjs/interceptors/0.8.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "441 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/node-match-path/0.6.3",
+    "size": 2254,
+    "status": "started"
+  },
+  "442 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/strict-event-emitter/0.1.0",
+    "size": 1666,
+    "status": "started"
+  },
+  "443 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/node-match-path/0.6.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "444 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strict-event-emitter/0.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "445 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint-plugin-jest/24.7.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint-plugin-jest",
+      "rawSpec": "^24.1.0"
+    }
+  },
+  "446 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-jest/24.7.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "447 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint-plugin-jest/24.7.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "448 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/call-bind/1.0.2",
+    "wanted": {
+      "dependentId": "/object.assign/4.1.4",
+      "name": "call-bind",
+      "rawSpec": "^1.0.2"
+    }
+  },
+  "449 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/call-bind/1.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "450 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/call-bind/1.0.2",
+    "wanted": {
+      "dependentId": "/object.entries/1.1.6",
+      "name": "call-bind",
+      "rawSpec": "^1.0.2"
+    }
+  },
+  "451 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/call-bind/1.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "452 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/define-properties/1.2.0",
+    "wanted": {
+      "dependentId": "/object.assign/4.1.4",
+      "name": "define-properties",
+      "rawSpec": "^1.1.4"
+    }
+  },
+  "453 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/define-properties/1.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "454 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/define-properties/1.2.0",
+    "wanted": {
+      "dependentId": "/object.entries/1.1.6",
+      "name": "define-properties",
+      "rawSpec": "^1.1.4"
+    }
+  },
+  "455 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/define-properties/1.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "456 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/confusing-browser-globals/1.0.11",
+    "wanted": {
+      "dependentId": "/eslint-config-airbnb-base/14.2.1",
+      "name": "confusing-browser-globals",
+      "rawSpec": "^1.0.10"
+    }
+  },
+  "457 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/confusing-browser-globals/1.0.11",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "458 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/confusing-browser-globals/1.0.11",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "459 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/has-symbols/1.0.3",
+    "wanted": {
+      "dependentId": "/object.assign/4.1.4",
+      "name": "has-symbols",
+      "rawSpec": "^1.0.3"
+    }
+  },
+  "460 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/has-symbols/1.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "461 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/has-symbols/1.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "462 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/object-keys/1.1.1",
+    "wanted": {
+      "dependentId": "/object.assign/4.1.4",
+      "name": "object-keys",
+      "rawSpec": "^1.1.1"
+    }
+  },
+  "463 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/object-keys/1.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "464 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ansi-styles/3.2.1",
+    "wanted": {
+      "dependentId": "/chalk/2.4.2",
+      "name": "ansi-styles",
+      "rawSpec": "^3.2.1"
+    }
+  },
+  "465 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/object-keys/1.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "466 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/yargs/16.2.0",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "yargs",
+      "rawSpec": "^16.2.0"
+    }
+  },
+  "467 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/yargs/16.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "468 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/supports-color/5.5.0",
+    "wanted": {
+      "dependentId": "/chalk/2.4.2",
+      "name": "supports-color",
+      "rawSpec": "^5.3.0"
+    }
+  },
+  "469 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/supports-color/5.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "470 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/supports-color/5.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "471 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/fast-diff/1.2.0",
+    "wanted": {
+      "dependentId": "/prettier-linter-helpers/1.0.0",
+      "name": "fast-diff",
+      "rawSpec": "^1.1.2"
+    }
+  },
+  "472 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fast-diff/1.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "473 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/fast-diff/1.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "474 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver-regex/3.1.4",
+    "wanted": {
+      "dependentId": "/find-versions/4.0.0",
+      "name": "semver-regex",
+      "rawSpec": "^3.1.2"
+    }
+  },
+  "475 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver-regex/3.1.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "476 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver-regex/3.1.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "477 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/find-up/5.0.0",
+    "wanted": {
+      "dependentId": "/pkg-dir/5.0.0",
+      "name": "find-up",
+      "rawSpec": "^5.0.0"
+    }
+  },
+  "478 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/find-up/5.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "479 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/find-up/5.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "480 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/color-convert/1.9.3",
+    "wanted": {
+      "dependentId": "/ansi-styles/3.2.1",
+      "name": "color-convert",
+      "rawSpec": "^1.9.0"
+    }
+  },
+  "481 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/color-convert/1.9.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "482 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/color-convert/1.9.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "483 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/escape-string-regexp/1.0.5",
+    "wanted": {
+      "dependentId": "/chalk/2.4.2",
+      "name": "escape-string-regexp",
+      "rawSpec": "^1.0.5"
+    }
+  },
+  "484 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/escape-string-regexp/1.0.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "485 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/escape-string-regexp/1.0.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "486 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/nice-try/1.0.5",
+    "wanted": {
+      "dependentId": "/cross-spawn/6.0.5",
+      "name": "nice-try",
+      "rawSpec": "^1.0.4"
+    }
+  },
+  "487 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/nice-try/1.0.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "488 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/nice-try/1.0.5",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "489 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/es-abstract/1.21.2",
+    "wanted": {
+      "dependentId": "/object.entries/1.1.6",
+      "name": "es-abstract",
+      "rawSpec": "^1.20.4"
+    }
+  },
+  "490 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/es-abstract/1.21.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "491 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/graphql/15.8.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "492 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/es-abstract/1.21.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "493 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/inquirer/7.3.3",
+    "wanted": {
+      "dependentId": "/msw/0.28.1",
+      "name": "inquirer",
+      "rawSpec": "^7.3.3"
+    }
+  },
+  "494 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/inquirer/7.3.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "495 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/call-bind/1.0.2",
+    "wanted": {
+      "dependentId": "/string.prototype.padend/3.1.4",
+      "name": "call-bind",
+      "rawSpec": "^1.0.2"
+    }
+  },
+  "496 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/define-properties/1.2.0",
+    "wanted": {
+      "dependentId": "/string.prototype.padend/3.1.4",
+      "name": "define-properties",
+      "rawSpec": "^1.1.4"
+    }
+  },
+  "497 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/es-abstract/1.21.2",
+    "wanted": {
+      "dependentId": "/string.prototype.padend/3.1.4",
+      "name": "es-abstract",
+      "rawSpec": "^1.20.4"
+    }
+  },
+  "498 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/shebang-command/1.2.0",
+    "wanted": {
+      "dependentId": "/cross-spawn/6.0.5",
+      "name": "shebang-command",
+      "rawSpec": "^1.2.0"
+    }
+  },
+  "499 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/shebang-command/1.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "500 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/shebang-command/1.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "501 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/which/1.3.1",
+    "wanted": {
+      "dependentId": "/cross-spawn/6.0.5",
+      "name": "which",
+      "rawSpec": "^1.2.9"
+    }
+  },
+  "502 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/which/1.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "503 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/which/1.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "504 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/path-key/2.0.1",
+    "wanted": {
+      "dependentId": "/cross-spawn/6.0.5",
+      "name": "path-key",
+      "rawSpec": "^2.0.1"
+    }
+  },
+  "505 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/path-key/2.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "506 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/path-key/2.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "507 debug pnpm:fetching-progress": {
+    "attempt": 1,
+    "packageId": "registry.npmjs.org/yargs/16.2.0",
+    "size": 62776,
+    "status": "started"
+  },
+  "508 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/load-json-file/4.0.0",
+    "wanted": {
+      "dependentId": "/read-pkg/3.0.0",
+      "name": "load-json-file",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "509 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/load-json-file/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "510 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/load-json-file/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "511 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/path-type/3.0.0",
+    "wanted": {
+      "dependentId": "/read-pkg/3.0.0",
+      "name": "path-type",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "512 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/path-type/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "513 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/path-type/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "514 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-obj/1.0.1",
+    "wanted": {
+      "dependentId": "/stringify-object/3.3.0",
+      "name": "is-obj",
+      "rawSpec": "^1.0.1"
+    }
+  },
+  "515 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-obj/1.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "516 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/chalk/4.1.0",
+    "wanted": {
+      "dependentId": "/log-symbols/4.1.0",
+      "name": "chalk",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "517 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-obj/1.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "518 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/get-own-enumerable-property-symbols/3.0.2",
+    "wanted": {
+      "dependentId": "/stringify-object/3.3.0",
+      "name": "get-own-enumerable-property-symbols",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "519 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/get-own-enumerable-property-symbols/3.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "520 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/get-own-enumerable-property-symbols/3.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "521 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@testing-library/dom/7.31.2",
+    "wanted": {
+      "dependentId": "/@testing-library/react/11.2.5",
+      "name": "@testing-library/dom",
+      "rawSpec": "^7.28.1"
+    }
+  },
+  "522 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/dom/7.31.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "523 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-regexp/1.0.0",
+    "wanted": {
+      "dependentId": "/stringify-object/3.3.0",
+      "name": "is-regexp",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "524 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-regexp/1.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "525 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/slice-ansi/3.0.0",
+    "wanted": {
+      "dependentId": "/cli-truncate/2.1.0",
+      "name": "slice-ansi",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "526 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/slice-ansi/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "527 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@testing-library/dom/7.31.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "528 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/path-type/4.0.0",
+    "wanted": {
+      "dependentId": "/cosmiconfig/7.1.0",
+      "name": "path-type",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "529 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/path-type/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "530 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-regexp/1.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "531 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/path-type/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "532 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/slice-ansi/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "533 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/yargs/16.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "fetched"
+  },
+  "534 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-unicode-supported/0.1.0",
+    "wanted": {
+      "dependentId": "/log-symbols/4.1.0",
+      "name": "is-unicode-supported",
+      "rawSpec": "^0.1.0"
+    }
+  },
+  "535 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-unicode-supported/0.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "536 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/eslint/7.32.0",
+    "wanted": {
+      "dependentId": "/react-scripts/4.0.3",
+      "name": "eslint",
+      "rawSpec": "^7.11.0"
+    }
+  },
+  "537 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint/7.32.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "538 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/normalize-package-data/2.5.0",
+    "wanted": {
+      "dependentId": "/read-pkg/3.0.0",
+      "name": "normalize-package-data",
+      "rawSpec": "^2.3.2"
+    }
+  },
+  "539 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize-package-data/2.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "540 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/brace-expansion/1.1.11",
+    "wanted": {
+      "dependentId": "/minimatch/3.1.2",
+      "name": "brace-expansion",
+      "rawSpec": "^1.1.7"
+    }
+  },
+  "541 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/brace-expansion/1.1.11",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "542 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cross-spawn/7.0.3",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "cross-spawn",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "543 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cross-spawn/7.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "544 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver-compare/1.0.0",
+    "wanted": {
+      "dependentId": "/please-upgrade-node/3.2.0",
+      "name": "semver-compare",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "545 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver-compare/1.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "546 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-unicode-supported/0.1.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "547 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/brace-expansion/1.1.11",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "548 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize-package-data/2.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "549 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/cross-spawn/7.0.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "550 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver-compare/1.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "551 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/eslint/7.32.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "552 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/parse-json/4.0.0",
+    "wanted": {
+      "dependentId": "/cosmiconfig/7.1.0",
+      "name": "@types/parse-json",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "553 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/parse-json/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "554 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/string-width/4.2.3",
+    "wanted": {
+      "dependentId": "/cli-truncate/2.1.0",
+      "name": "string-width",
+      "rawSpec": "^4.2.0"
+    }
+  },
+  "555 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/string-width/4.2.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "556 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/parse-json/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "557 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/string-width/4.2.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "558 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/parse-json/5.2.0",
+    "wanted": {
+      "dependentId": "/cosmiconfig/7.1.0",
+      "name": "parse-json",
+      "rawSpec": "^5.0.0"
+    }
+  },
+  "559 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/parse-json/5.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "560 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/import-fresh/3.3.0",
+    "wanted": {
+      "dependentId": "/cosmiconfig/7.1.0",
+      "name": "import-fresh",
+      "rawSpec": "^3.2.1"
+    }
+  },
+  "561 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/import-fresh/3.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "562 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/import-fresh/3.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "563 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/parse-json/5.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "564 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ansi-colors/4.1.3",
+    "wanted": {
+      "dependentId": "/enquirer/2.3.6",
+      "name": "ansi-colors",
+      "rawSpec": "^4.1.1"
+    }
+  },
+  "565 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ansi-colors/4.1.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "566 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ansi-colors/4.1.3",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "567 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/human-signals/1.1.1",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "human-signals",
+      "rawSpec": "^1.1.1"
+    }
+  },
+  "568 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/human-signals/1.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "569 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/human-signals/1.1.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "570 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/picomatch/2.3.1",
+    "wanted": {
+      "dependentId": "/micromatch/4.0.5",
+      "name": "picomatch",
+      "rawSpec": "^2.3.1"
+    }
+  },
+  "571 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/picomatch/2.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "572 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/semver/5.7.1",
+    "wanted": {
+      "dependentId": "/cross-spawn/6.0.5",
+      "name": "semver",
+      "rawSpec": "^5.5.0"
+    }
+  },
+  "573 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/5.7.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "574 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/cli-truncate/2.1.0",
+    "wanted": {
+      "dependentId": "/listr2/3.14.0",
+      "name": "cli-truncate",
+      "rawSpec": "^2.1.0"
+    }
+  },
+  "575 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ms/2.1.2",
+    "wanted": {
+      "dependentId": "/debug/4.3.4",
+      "name": "ms",
+      "rawSpec": "2.1.2"
+    }
+  },
+  "576 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ms/2.1.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "577 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/picomatch/2.3.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "578 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/semver/5.7.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "579 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/ms/2.1.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "580 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/npm-run-path/4.0.1",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "npm-run-path",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "581 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/npm-run-path/4.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "582 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/is-stream/2.0.1",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "is-stream",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "583 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-stream/2.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "584 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/merge-stream/2.0.0",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "merge-stream",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "585 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/merge-stream/2.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "586 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/npm-run-path/4.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "587 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/is-stream/2.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "588 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/merge-stream/2.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "589 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/onetime/5.1.2",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "onetime",
+      "rawSpec": "^5.1.0"
+    }
+  },
+  "590 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/onetime/5.1.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "591 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/get-stream/5.2.0",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "get-stream",
+      "rawSpec": "^5.0.0"
+    }
+  },
+  "592 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/get-stream/5.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "593 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/onetime/5.1.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "594 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/get-stream/5.2.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "595 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/signal-exit/3.0.7",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "signal-exit",
+      "rawSpec": "^3.0.2"
+    }
+  },
+  "596 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/signal-exit/3.0.7",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "597 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/ansi-styles/4.3.0",
+    "wanted": {
+      "dependentId": "/chalk/3.0.0",
+      "name": "ansi-styles",
+      "rawSpec": "^4.1.0"
+    }
+  },
+  "598 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/supports-color/7.2.0",
+    "wanted": {
+      "dependentId": "/chalk/3.0.0",
+      "name": "supports-color",
+      "rawSpec": "^7.1.0"
+    }
+  },
+  "599 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/signal-exit/3.0.7",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "600 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/braces/3.0.2",
+    "wanted": {
+      "dependentId": "/micromatch/4.0.5",
+      "name": "braces",
+      "rawSpec": "^3.0.2"
+    }
+  },
+  "601 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/braces/3.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "602 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/braces/3.0.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "603 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/yaml/1.10.2",
+    "wanted": {
+      "dependentId": "/cosmiconfig/7.1.0",
+      "name": "yaml",
+      "rawSpec": "^1.10.0"
+    }
+  },
+  "604 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/yaml/1.10.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "605 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/yaml/1.10.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "606 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/inherits/2.0.4",
+    "wanted": {
+      "dependentId": "/css/3.0.0",
+      "name": "inherits",
+      "rawSpec": "^2.0.4"
+    }
+  },
+  "607 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/inherits/2.0.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "608 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/inherits/2.0.4",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "609 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/p-map/4.0.0",
+    "wanted": {
+      "dependentId": "/listr2/3.14.0",
+      "name": "p-map",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "610 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/p-map/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "611 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/log-update/4.0.0",
+    "wanted": {
+      "dependentId": "/listr2/3.14.0",
+      "name": "log-update",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "612 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/log-update/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "613 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/p-map/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "614 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/log-update/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "615 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/through/2.3.8",
+    "wanted": {
+      "dependentId": "/listr2/3.14.0",
+      "name": "through",
+      "rawSpec": "^2.3.8"
+    }
+  },
+  "616 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/through/2.3.8",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "617 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "wanted": {
+      "dependentId": "/aria-query/4.2.2",
+      "name": "@babel/runtime",
+      "rawSpec": "^7.10.2"
+    }
+  },
+  "618 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/through/2.3.8",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "619 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/rfdc/1.3.0",
+    "wanted": {
+      "dependentId": "/listr2/3.14.0",
+      "name": "rfdc",
+      "rawSpec": "^1.3.0"
+    }
+  },
+  "620 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rfdc/1.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "621 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/rfdc/1.3.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "622 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/wrap-ansi/7.0.0",
+    "wanted": {
+      "dependentId": "/listr2/3.14.0",
+      "name": "wrap-ansi",
+      "rawSpec": "^7.0.0"
+    }
+  },
+  "623 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/wrap-ansi/7.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "624 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/color-convert/2.0.1",
+    "wanted": {
+      "dependentId": "/ansi-styles/4.3.0",
+      "name": "color-convert",
+      "rawSpec": "^2.0.1"
+    }
+  },
+  "625 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/color-convert/2.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "626 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/wrap-ansi/7.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "627 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/color-convert/2.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "628 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/indent-string/4.0.0",
+    "wanted": {
+      "dependentId": "/redent/3.0.0",
+      "name": "indent-string",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "629 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/indent-string/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "630 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "wanted": {
+      "dependentId": "/react-router/5.2.0",
+      "name": "@babel/runtime",
+      "rawSpec": "^7.1.2"
+    }
+  },
+  "631 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/history/4.10.1",
+    "wanted": {
+      "dependentId": "/react-router/5.2.0",
+      "name": "history",
+      "rawSpec": "^4.9.0"
+    }
+  },
+  "632 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/strip-indent/3.0.0",
+    "wanted": {
+      "dependentId": "/redent/3.0.0",
+      "name": "strip-indent",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "633 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strip-indent/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "634 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/loose-envify/1.4.0",
+    "wanted": {
+      "dependentId": "/react-router/5.2.0",
+      "name": "loose-envify",
+      "rawSpec": "^1.3.1"
+    }
+  },
+  "635 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/indent-string/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "636 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strip-indent/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "637 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/colorette/2.0.19",
+    "wanted": {
+      "dependentId": "/listr2/3.14.0",
+      "name": "colorette",
+      "rawSpec": "^2.0.16"
+    }
+  },
+  "638 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/colorette/2.0.19",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "639 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/source-map-resolve/0.6.0",
+    "wanted": {
+      "dependentId": "/css/3.0.0",
+      "name": "source-map-resolve",
+      "rawSpec": "^0.6.0"
+    }
+  },
+  "640 debug pnpm:deprecation": {
+    "deprecated": "See https://github.com/lydell/source-map-resolve#deprecated",
+    "depth": 2,
+    "pkgId": "registry.npmjs.org/source-map-resolve/0.6.0",
+    "pkgName": "source-map-resolve",
+    "pkgVersion": "0.6.0",
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice"
+  },
+  "641 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/source-map-resolve/0.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "642 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prop-types/15.8.1",
+    "wanted": {
+      "dependentId": "/react-router/5.2.0",
+      "name": "prop-types",
+      "rawSpec": "^15.6.2"
+    }
+  },
+  "643 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/source-map-resolve/0.6.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "644 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/colorette/2.0.19",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "645 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/has-flag/4.0.0",
+    "wanted": {
+      "dependentId": "/supports-color/7.2.0",
+      "name": "has-flag",
+      "rawSpec": "^4.0.0"
+    }
+  },
+  "646 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/has-flag/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "647 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tiny-invariant/1.3.1",
+    "wanted": {
+      "dependentId": "/react-router/5.2.0",
+      "name": "tiny-invariant",
+      "rawSpec": "^1.0.2"
+    }
+  },
+  "648 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tiny-warning/1.0.3",
+    "wanted": {
+      "dependentId": "/react-router/5.2.0",
+      "name": "tiny-warning",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "649 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@babel/runtime/7.21.0",
+    "wanted": {
+      "dependentId": "/history/4.10.1",
+      "name": "@babel/runtime",
+      "rawSpec": "^7.1.2"
+    }
+  },
+  "650 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/loose-envify/1.4.0",
+    "wanted": {
+      "dependentId": "/history/4.10.1",
+      "name": "loose-envify",
+      "rawSpec": "^1.2.0"
+    }
+  },
+  "651 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/has-flag/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "652 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/mini-create-react-context/0.4.1",
+    "wanted": {
+      "dependentId": "/react-router/5.2.0",
+      "name": "mini-create-react-context",
+      "rawSpec": "^0.4.0"
+    }
+  },
+  "653 debug pnpm:deprecation": {
+    "deprecated": "Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.",
+    "depth": 2,
+    "pkgId": "registry.npmjs.org/mini-create-react-context/0.4.1",
+    "pkgName": "mini-create-react-context",
+    "pkgVersion": "0.4.1",
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice"
+  },
+  "654 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/mini-create-react-context/0.4.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "655 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tiny-invariant/1.3.1",
+    "wanted": {
+      "dependentId": "/history/4.10.1",
+      "name": "tiny-invariant",
+      "rawSpec": "^1.0.2"
+    }
+  },
+  "656 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tiny-warning/1.0.3",
+    "wanted": {
+      "dependentId": "/history/4.10.1",
+      "name": "tiny-warning",
+      "rawSpec": "^1.0.0"
+    }
+  },
+  "657 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/mini-create-react-context/0.4.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "658 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/source-map/0.6.1",
+    "wanted": {
+      "dependentId": "/css/3.0.0",
+      "name": "source-map",
+      "rawSpec": "^0.6.1"
+    }
+  },
+  "659 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/source-map/0.6.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "660 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/hoist-non-react-statics/3.3.2",
+    "wanted": {
+      "dependentId": "/react-router/5.2.0",
+      "name": "hoist-non-react-statics",
+      "rawSpec": "^3.1.0"
+    }
+  },
+  "661 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/hoist-non-react-statics/3.3.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "662 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/loose-envify/1.4.0",
+    "wanted": {
+      "dependentId": "/prop-types/15.8.1",
+      "name": "loose-envify",
+      "rawSpec": "^1.4.0"
+    }
+  },
+  "663 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/object-assign/4.1.1",
+    "wanted": {
+      "dependentId": "/prop-types/15.8.1",
+      "name": "object-assign",
+      "rawSpec": "^4.1.1"
+    }
+  },
+  "664 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/source-map/0.6.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "665 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/hoist-non-react-statics/3.3.2",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "666 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/regenerator-runtime/0.13.11",
+    "wanted": {
+      "dependentId": "/@babel/runtime/7.21.0",
+      "name": "regenerator-runtime",
+      "rawSpec": "^0.13.11"
+    }
+  },
+  "667 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/regenerator-runtime/0.13.11",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "668 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/regenerator-runtime/0.13.11",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "669 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/value-equal/1.0.1",
+    "wanted": {
+      "dependentId": "/history/4.10.1",
+      "name": "value-equal",
+      "rawSpec": "^1.0.1"
+    }
+  },
+  "670 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/value-equal/1.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "671 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/value-equal/1.0.1",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "672 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/strip-final-newline/2.0.0",
+    "wanted": {
+      "dependentId": "/execa/4.1.0",
+      "name": "strip-final-newline",
+      "rawSpec": "^2.0.0"
+    }
+  },
+  "673 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strip-final-newline/2.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "674 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@types/jest/29.5.0",
+    "wanted": {
+      "dependentId": "/@types/testing-library__jest-dom/5.14.5",
+      "name": "@types/jest",
+      "rawSpec": "*"
+    }
+  },
+  "675 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/jest/29.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "676 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/js-tokens/4.0.0",
+    "wanted": {
+      "dependentId": "/loose-envify/1.4.0",
+      "name": "js-tokens",
+      "rawSpec": "^3.0.0 || ^4.0.0"
+    }
+  },
+  "677 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/js-tokens/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "678 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@open-draft/until/1.0.3",
+    "wanted": {
+      "dependentId": "/@mswjs/interceptors/0.8.1",
+      "name": "@open-draft/until",
+      "rawSpec": "^1.0.3"
+    }
+  },
+  "679 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/debug/4.3.4",
+    "wanted": {
+      "dependentId": "/@mswjs/interceptors/0.8.1",
+      "name": "debug",
+      "rawSpec": "^4.3.0"
+    }
+  },
+  "680 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/headers-utils/3.0.2",
+    "wanted": {
+      "dependentId": "/@mswjs/interceptors/0.8.1",
+      "name": "headers-utils",
+      "rawSpec": "^3.0.2"
+    }
+  },
+  "681 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/strict-event-emitter/0.2.8",
+    "wanted": {
+      "dependentId": "/@mswjs/interceptors/0.8.1",
+      "name": "strict-event-emitter",
+      "rawSpec": "^0.2.0"
+    }
+  },
+  "682 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strict-event-emitter/0.2.8",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "683 warn pnpm:install-check": {
+    "message": "Unsupported platform for registry.npmjs.org/fsevents/2.3.2: wanted {\"cpu\":[\"any\"],\"os\":[\"darwin\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\"})",
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice"
+  },
+  "684 debug pnpm:skipped-optional-dependency": {
+    "details": "Error: Unsupported platform for registry.npmjs.org/fsevents/2.3.2: wanted {\"cpu\":[\"any\"],\"os\":[\"darwin\"]} (current: {\"os\":\"linux\",\"cpu\":\"x64\"})",
+    "package": {
+      "id": "registry.npmjs.org/fsevents/2.3.2",
+      "name": "fsevents",
+      "version": "2.3.2"
+    },
+    "prefix": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "reason": "unsupported_platform"
+  },
+  "685 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/fsevents/2.3.2",
+    "wanted": {
+      "dependentId": "/chokidar/3.5.3",
+      "name": "fsevents",
+      "rawSpec": "~2.3.2"
+    }
+  },
+  "686 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/resolve-pathname/3.0.0",
+    "wanted": {
+      "dependentId": "/history/4.10.1",
+      "name": "resolve-pathname",
+      "rawSpec": "^3.0.0"
+    }
+  },
+  "687 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve-pathname/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "resolved"
+  },
+  "688 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/strip-final-newline/2.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "689 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/js-tokens/4.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "690 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/resolve-pathname/3.0.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "691 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@types/jest/29.5.0",
+    "requester": "/home/workspace/reactjs/coding-practices/fetchAndRoutingPractice",
+    "status": "found_in_store"
+  },
+  "692 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@types%2Fthrough"
+  },
+  "693 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/@types%2Fset-cookie-parser"
+  },
+  "694 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/set-cookie-parser"
+  },
+  "695 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/anymatch"
+  },
+  "696 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ERR_SOCKET_TIMEOUT",
+      "code": "ERR_SOCKET_TIMEOUT",
+      "attempts": 1,
+      "resource": "https://registry.npmjs.org/strict-event-emitter/-/strict-event-emitter-0.2.8.tgz"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/strict-event-emitter/-/strict-event-emitter-0.2.8.tgz"
+  },
+  "697 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/@types%2Fthrough"
+  },
+  "698 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/@types%2Fset-cookie-parser"
+  },
+  "699 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/set-cookie-parser"
+  },
+  "700 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo",
+      "attempts": 2,
+      "resource": "https://registry.npmjs.org/strict-event-emitter/-/strict-event-emitter-0.2.8.tgz"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/strict-event-emitter/-/strict-event-emitter-0.2.8.tgz"
+  },
+  "701 debug pnpm:request-retry": {
+    "attempt": 2,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 60000,
+    "url": "https://registry.npmjs.org/anymatch"
+  },
+  "702 error pnpm": {
+    "code": "ERR_PNPM_META_FETCH_FAIL",
+    "attempts": 1,
+    "pkgsStack": [
+      {
+        "id": "registry.npmjs.org/msw/0.28.1",
+        "name": "msw",
+        "version": "0.28.1"
+      },
+      {
+        "id": "registry.npmjs.org/@types/inquirer/7.3.3",
+        "name": "@types/inquirer",
+        "version": "7.3.3"
+      }
+    ],
+    "err": {
+      "name": "pnpm",
+      "message": "GET https://registry.npmjs.org/@types%2Fthrough: request to https://registry.npmjs.org/@types%2Fthrough failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org",
+      "code": "ERR_PNPM_META_FETCH_FAIL",
+      "stack": "pnpm: GET https://registry.npmjs.org/@types%2Fthrough: request to https://registry.npmjs.org/@types%2Fthrough failed, reason: getaddrinfo ENOTFOUND registry.npmjs.org\n    at RetryOperation._fn (/usr/local/lib/node_modules/pnpm/dist/pnpm.cjs:85807:19)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)"
+    }
+  },
+  "703 debug pnpm:request-retry": {
+    "attempt": 1,
+    "error": {
+      "type": "system",
+      "errno": "ENOTFOUND",
+      "code": "ENOTFOUND",
+      "erroredSysCall": "getaddrinfo"
+    },
+    "maxRetries": 2,
+    "method": "GET",
+    "timeout": 10000,
+    "url": "https://registry.npmjs.org/braces"
+  }
+}
